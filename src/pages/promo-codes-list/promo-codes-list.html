@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let company of companies" (click)="goToPromoCodesView(company.id)">
+      <ion-thumbnail item-start>
+        <img src="{{company.imgSrc}}" />
+      </ion-thumbnail>
+      <h2>{{company.companyName}}</h2>
+      <p>{{company.companyInfo}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

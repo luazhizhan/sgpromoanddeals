@@ -1,0 +1,41 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item menuClose (click)="openDefinePage('HomePage')">
+        <ion-icon name="home" item-start></ion-icon>
+        Home
+      </ion-item>
+      <ion-item menuClose (click)="openDefinePage('AboutPage')">
+        <ion-icon name="information-circle" item-start></ion-icon>
+        About
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header>
+        Promo Codes
+      </ion-list-header>
+      <ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon name="{{p.icon}}" item-start></ion-icon>
+        {{p.title}}
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header>
+        Deals
+      </ion-list-header>
+      <ion-item menuClose (click)="openDefinePage('DealsListViewPage')">
+        <ion-icon name="cash" item-start></ion-icon>
+        All Deals
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

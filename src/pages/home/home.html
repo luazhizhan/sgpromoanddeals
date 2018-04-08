@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>SG PROMO AND DEALS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card (click)="goToPromoCodesList('taxi')">
+    <img src="assets/imgs/home/taxi_promo_codes.png" />
+  </ion-card>
+  <ion-card (click)="goToPromoCodesList('ecommerce')">
+    <img src="assets/imgs/home/Ecommerce_promo_codes.png" />
+  </ion-card>
+  <ion-card (click)="goToPromoCodesList('foodDelivery')">
+    <img src="assets/imgs/home/food_delivery_promo_codes.png" />
+  </ion-card>
+</ion-content>

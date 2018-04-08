@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ALL DEALS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner style="display: block;margin: auto;" *ngIf="showSpinner"></ion-spinner>
+  <ion-list>
+    <ion-card *ngFor="let deal of deals">
+      <img src="{{deal.imageUrl}}" style="height:250px" imageViewer>
+      <ion-card-content>
+        <ion-card-title>
+          {{deal.title}}
+        </ion-card-title>
+        <h3 style="color:darkgray">{{deal.subTitle}}</h3>
+        <p>
+          {{deal.details}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

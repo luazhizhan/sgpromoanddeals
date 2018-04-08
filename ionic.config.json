@@ -1,0 +1,8 @@
+{
+  "name": "sgpromoanddeals",
+  "app_id": "87cd84fa",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
